@@ -1,0 +1,119 @@
+html {
+  height: 100%;
+}
+body {
+  padding: 0px 0px;
+  margin: 0px 0px;
+  height: 100%;
+  background-color: #000000;
+}
+.flex-container {
+  padding: 0px 0px;
+  margin: 0px 0px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inner {
+  padding: 0px 0px;
+  margin: 0px 0px;
+  color: #E6438C;
+  font-family: "Lucida Sans Unicode";
+  /* font-size: 750%; */
+  font-size: 450%;
+  font-style: italic;
+  font-weight: bold;
+  text-shadow: 
+  -1px -1px .15em #FFFFFF, 
+  1px -1px .15em #FFFFFF, 
+  -1px 1px .15em #FFFFFF,
+  1px 1px .15em #FFFFFF; 
+  /* new stuff below */
+  /* border: 1px solid blue; */
+  position: relative;
+}
+
+.l1, .l2, .l3, .l4, .l5, .l6, .l7, .l8, .l9 {
+  position: relative;
+  display: inline-block;
+  /* border: 1px solid green; */
+  visibility: hidden;
+}
+.w1, .w2, .w3, .w4, .w5, .w6, .w7, .w8, .w9 {
+  position: absolute;
+  visibility: visible;
+  /* border: 1px solid pink; */
+}
+
+.w2, .w3, .w4, 
+.w6, .w7, .w8, .w9 {
+  opacity: 0; /* animation-fill-mode will persist opacity 1 used during animation */
+  /* All about animation here: */
+  animation-name: flip-up-one;
+  animation-duration: .5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  transform-origin: 0% 80%;
+  transition-property: opacity;
+}
+
+.l1 { 
+  /* Gah, I hate explicit pixel sizes!
+   * but I gotta put this here so that 
+   * the big 'L' doesn't squash next to the 'o'
+   */
+   margin-right: 9px; 
+}
+
+.w1 { 
+  overflow: hidden; /* seems necessary */
+  padding-right: 5px;
+  padding-left: 8px;
+  /* animate first letter */
+  animation-name: wipe; 
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+}
+
+.w5 { 
+  opacity: 0; /*animation-fill-mode will persist opacity in animation */
+  animation-name: slide-letter-to-right;
+  animation-delay: 1.15s;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.w2 { animation-delay: 2.70s; }
+.w3 { animation-delay: 2.85s; }
+.w4 { animation-delay: 3.00s; }
+.w6 { animation-delay: 3.15s }
+.w7 { animation-delay: 3.30s; }
+.w8 { animation-delay: 3.45s; }
+.w9 { animation-delay: 3.60s; }
+
+
+@keyframes wipe {
+  0%   { height: 0px; }
+  100% { min-height: 200px; }
+}
+
+@keyframes flip-up-one {
+  0% {
+    transform: rotateX( -90deg);
+    opacity: 1;
+  }
+  100% { 
+    transform: rotateX( 0deg );
+    opacity: 1;
+  }
+}
+
+@keyframes slide-letter-to-right {
+  0% { transform: translateX(-145px); opacity: 1 }
+  100% { transform: translateX(0px); opacity: 1 }
+}
+
+@keyframes test-it { from { opacity: 0; } to { opacity: 1; } }
+
