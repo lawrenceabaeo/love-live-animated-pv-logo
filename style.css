@@ -18,10 +18,9 @@ body {
 .inner {
   padding: 0px 0px;
   margin: 0px 0px;
-  color: #E6438C;
+  color: #E6438C; /* pink */
   font-family: "Lucida Sans Unicode";
-  /* font-size: 750%; */
-  font-size: 450%;
+  font-size: 750%;
   font-style: italic;
   font-weight: bold;
   text-shadow: 
@@ -32,6 +31,7 @@ body {
   /* new stuff below */
   /* border: 1px solid blue; */
   position: relative;
+  bottom: 150px;
 }
 
 .l1, .l2, .l3, .l4, .l5, .l6, .l7, .l8, .l9 {
@@ -71,32 +71,51 @@ body {
   padding-right: 5px;
   padding-left: 8px;
   /* animate first letter */
-  animation-name: wipe; 
+  animation-name: wipe;
   animation-duration: 2s;
   animation-timing-function: ease-in;
 }
 
+.s1 {
+  animation-name: grow-up;
+  animation-delay: 1.55s;
+  animation-duration: .5s;
+  tranform: translateZ(0);
+}
+
+
 .w5 { 
   opacity: 0; /*animation-fill-mode will persist opacity in animation */
   animation-name: slide-letter-to-right;
-  animation-delay: 1.15s;
-  animation-duration: 1.5s;
+  animation-delay: 2.10s;
+  animation-duration: 1.35s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
 
-.w2 { animation-delay: 2.70s; }
-.w3 { animation-delay: 2.85s; }
-.w4 { animation-delay: 3.00s; }
-.w6 { animation-delay: 3.15s }
-.w7 { animation-delay: 3.30s; }
-.w8 { animation-delay: 3.45s; }
-.w9 { animation-delay: 3.60s; }
+/*
+.w2 { animation-delay: 3.15s }
+.w3 { animation-delay: 3.30s; }
+.w4 { animation-delay: 3.45s; }
+.w6 { animation-delay: 3.60s; }
+.w7 { animation-delay: 3.75s }
+.w8 { animation-delay: 3.90s; }
+.w9 { animation-delay: 4.05s; }
+*/
+
+.w2 { animation-delay: 3.6s }
+.w3 { animation-delay: 3.75s; }
+.w4 { animation-delay: 3.9s; }
+.w6 { animation-delay: 4.05s; }
+.w7 { animation-delay: 4.2s }
+.w8 { animation-delay: 4.35s; }
+.w9 { animation-delay: 4.5s; }
+
 
 
 @keyframes wipe {
   0%   { height: 0px; }
-  100% { min-height: 200px; }
+  100% { height: 200px; }
 }
 
 @keyframes flip-up-one {
@@ -111,9 +130,34 @@ body {
 }
 
 @keyframes slide-letter-to-right {
-  0% { transform: translateX(-145px); opacity: 1 }
+  0% { transform: translateX(-235px); opacity: 1 }
   100% { transform: translateX(0px); opacity: 1 }
 }
 
 @keyframes test-it { from { opacity: 0; } to { opacity: 1; } }
 
+/* 
+ * https://github.com/IanLunn/Hover/blob/master/css/hover.css
+ */
+@keyframes grow-up {
+  0% {
+    opacity: 1;
+    transform: scale(3);
+  }
+  15% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(12);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
