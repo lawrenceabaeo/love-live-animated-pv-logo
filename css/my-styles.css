@@ -28,8 +28,6 @@ body {
   1px -1px .15em #FFFFFF, 
   -1px 1px .15em #FFFFFF,
   1px 1px .15em #FFFFFF; 
-  /* new stuff below */
-  /* border: 1px solid blue; */
   position: relative;
   bottom: 150px;
 }
@@ -56,13 +54,11 @@ body {
 @keyframes show-me {
   0% { visibility: hidden; }
   5% { visibility: visible; }
-  50% {
-  text-shadow: 
-  -1px -1px .15em #FFFFFF, 
-  1px -1px .15em #FFFFFF, 
-  -1px 1px .15em #FFFFFF,
-  1px 1px .15em #FFFFFF; 
-  }
+  50% { text-shadow: 
+        -1px -1px .15em #FFFFFF, 
+        1px -1px .15em #FFFFFF, 
+        -1px 1px .15em #FFFFFF,
+        1px 1px .15em #FFFFFF; }
   100% { text-shadow: none; }
 }
 
