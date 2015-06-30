@@ -1,12 +1,14 @@
 html {
   height: 100%;
 }
+
 body {
   padding: 0px 0px;
   margin: 0px 0px;
   height: 100%;
   background-color: #000000;
 }
+
 .flex-container {
   padding: 0px 0px;
   margin: 0px 0px;
@@ -15,6 +17,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .inner {
   padding: 0px 0px;
   margin: 0px 0px;
@@ -31,27 +34,40 @@ body {
   position: relative;
   bottom: 150px;
 }
-
+/* These l[n] letters are used for positioning purposes, 
+ * the w[n] letters are then used because some of the 
+ * animations only work with 
+ * absolutely positioned elements */
 .l1, .l2, .l3, .l4, .l5, .l6, .l7, .l8, .l9 {
   position: relative;
   display: inline-block;
   visibility: hidden;
 }
+
+.l1 { 
+   /* I have to use explict pixel size here so
+   * the big 'L' doesn't squash next to the 'o'.
+   * during the wipe animation! */
+   margin-right: 9px; 
+   padding-left: 10px;
+}
+
 .w1, .w2, .w3, .w4, .w5, .w6, .w7, .w8, .w9 {
   position: absolute;
   visibility: visible;
 }
-.b1 {
+
+.fake-background-el {
   position: absolute;
   visibility: hidden;
   left: 18px;
-  animation-name: show-me;
+  animation-name: fake-it;
   animation-delay: 1.2s; 
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
 
-@keyframes show-me {
+@keyframes fake-it {
   0% { visibility: hidden; }
   5% { visibility: visible; }
   50% { text-shadow: 
@@ -65,7 +81,6 @@ body {
 .w2, .w3, .w4, 
 .w6, .w7, .w8, .w9 {
   opacity: 0; /* animation-fill-mode will persist opacity 1 used during animation */
-  /* All about animation here: */
   animation-name: flip-up-one;
   animation-duration: .5s;
   animation-timing-function: ease-out;
@@ -74,25 +89,16 @@ body {
   transition-property: opacity;
 }
 
-.l1 { 
-  /* Gah, I hate explicit pixel sizes!
-   * but I gotta put this here so that 
-   * the big 'L' doesn't squash next to the 'o'
-   */
-   margin-right: 9px; 
-   padding-left: 10px;
-}
-
 .w1 { 
   overflow: hidden; /* seems necessary */
-  padding-right: 5px;
+  padding-right: 5px; /* More explicit padding, for position purposes */
   padding-left: 8px;
-  animation-name: wipe;
+  animation-name: wipe-down;
   animation-duration: 1.95s;
   animation-timing-function: linear;
 }
 
-.s1 {
+.pulsing-el {
   animation-name: grow-up;
   animation-delay: 1.2s;
   animation-duration: 1.25s;
@@ -116,27 +122,17 @@ body {
 .w8 { animation-delay: 4.35s; }
 .w9 { animation-delay: 4.5s; }
 
-@keyframes wipe {
-  from { height: 0px; } to { height: 200px; }
-}
+@keyframes wipe-down { from { height: 0px; } to { height: 200px; } }
 
 @keyframes flip-up-one {
-  0% {
-    transform: rotateX( -90deg);
-    opacity: 1;
-  }
-  100% { 
-    transform: rotateX( 0deg );
-    opacity: 1;
-  }
+  0%   { transform: rotateX( -90deg); opacity: 1; }
+  100% { transform: rotateX( 0deg ); opacity: 1; }
 }
 
 @keyframes slide-letter-to-right {
   0% { transform: translateX(-235px); opacity: 1 }
   100% { transform: translateX(0px); opacity: 1 }
 }
-
-@keyframes test-it { from { opacity: 0; } to { opacity: 1; } }
 
 @keyframes grow-up {
   0%   { opacity:  0;  transform: scale(1); }
@@ -157,6 +153,9 @@ body {
   81%  { opacity:  0; transform: scale(1); }
   100% { opacity: 1; scale(1); }
 }
+
+/********************************************/
+/* SCHOOL IDOL LETTER STYLING AND ANIMATION */
 
 div.school-idol {
   /* Font is from here: 
@@ -186,3 +185,6 @@ div.school-idol {
   from { opacity: 0; transform: translateY(40px) scaleY(.85); }
   to   { opacity: 1; transform: translateY(0px) scaleY(.85); }
 }
+
+/********************************************/
+@keyframes test-it { from { opacity: 0; } to { opacity: 1; } }
