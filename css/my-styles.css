@@ -37,18 +37,15 @@ body {
 .l1, .l2, .l3, .l4, .l5, .l6, .l7, .l8, .l9 {
   position: relative;
   display: inline-block;
-  /* border: 1px solid green; */
   visibility: hidden;
 }
 .w1, .w2, .w3, .w4, .w5, .w6, .w7, .w8, .w9 {
   position: absolute;
   visibility: visible;
-  /* border: 1px solid pink; */
 }
 .b1 {
   position: absolute;
   visibility: hidden;
-  /* left: 8px; */
   left: 18px;
   animation-name: show-me;
   animation-delay: 1.2s; 
@@ -58,19 +55,15 @@ body {
 
 @keyframes show-me {
   0% { visibility: hidden; }
-  5% { 
-    visibility: visible; 
-  }
+  5% { visibility: visible; }
   50% {
   text-shadow: 
   -1px -1px .15em #FFFFFF, 
   1px -1px .15em #FFFFFF, 
   -1px 1px .15em #FFFFFF,
   1px 1px .15em #FFFFFF; 
-}
-  100% {
-    text-shadow: none;
   }
+  100% { text-shadow: none; }
 }
 
 .w2, .w3, .w4, 
@@ -98,7 +91,6 @@ body {
   overflow: hidden; /* seems necessary */
   padding-right: 5px;
   padding-left: 8px;
-  /* animate first letter */
   animation-name: wipe;
   animation-duration: 1.95s;
   animation-timing-function: linear;
@@ -120,16 +112,6 @@ body {
   animation-fill-mode: forwards;
 }
 
-/*
-.w2 { animation-delay: 3.15s }
-.w3 { animation-delay: 3.30s; }
-.w4 { animation-delay: 3.45s; }
-.w6 { animation-delay: 3.60s; }
-.w7 { animation-delay: 3.75s }
-.w8 { animation-delay: 3.90s; }
-.w9 { animation-delay: 4.05s; }
-*/
-
 .w2 { animation-delay: 3.6s }
 .w3 { animation-delay: 3.75s; }
 .w4 { animation-delay: 3.9s; }
@@ -138,11 +120,8 @@ body {
 .w8 { animation-delay: 4.35s; }
 .w9 { animation-delay: 4.5s; }
 
-
-
 @keyframes wipe {
-  0%   { height: 0px; }
-  100% { height: 200px; }
+  from { height: 0px; } to { height: 200px; }
 }
 
 @keyframes flip-up-one {
