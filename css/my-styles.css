@@ -19,16 +19,17 @@ body {
 .inner {
   padding: 0px 0px;
   margin: 0px 0px;
-  color: #E6438C; /* pink */
+  /* color: #E6438C; /* pink */ 
+  color: #ffffff;
   font-family: "Lucida Sans Unicode";
   font-size: 750%;
   font-style: italic;
   font-weight: bold;
   text-shadow: 
-  -1px -1px .15em #FFFFFF, 
-  1px -1px .15em #FFFFFF, 
-  -1px 1px .15em #FFFFFF,
-  1px 1px .15em #FFFFFF; 
+  -1px -1px .10em #cccccc, 
+  1px -1px .10em #cccccc, 
+  -1px 1px .10em #cccccc,
+  1px 1px .10em #cccccc; 
   position: relative;
   bottom: 150px;
 }
