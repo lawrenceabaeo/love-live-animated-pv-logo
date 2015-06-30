@@ -1,6 +1,4 @@
-html {
-  height: 100%;
-}
+html { height: 100%; }
 
 body {
   padding: 0px 0px;
@@ -34,6 +32,7 @@ body {
   position: relative;
   bottom: 150px;
 }
+
 /* These l[n] letters are used for positioning purposes, 
  * the w[n] letters are then used because some of the 
  * animations only work with 
@@ -54,8 +53,19 @@ body {
 
 .w1, .w2, .w3, .w4, .w5, .w6, .w7, .w8, .w9 {
   position: absolute;
-  visibility: visible;
+  visibility: visible; /* needed because the parent containers (l[n]) are hidden */
 }
+
+.w1 { 
+  overflow: hidden; /* seems necessary */
+  padding-right: 5px; /* More explicit padding, for position purposes */
+  padding-left: 8px;
+  animation-name: wipe-down;
+  animation-duration: 1.95s;
+  animation-timing-function: linear;
+}
+
+@keyframes wipe-down { from { height: 0px; } to { height: 200px; } }
 
 .fake-background-el {
   position: absolute;
@@ -89,20 +99,17 @@ body {
   transition-property: opacity;
 }
 
-.w1 { 
-  overflow: hidden; /* seems necessary */
-  padding-right: 5px; /* More explicit padding, for position purposes */
-  padding-left: 8px;
-  animation-name: wipe-down;
-  animation-duration: 1.95s;
-  animation-timing-function: linear;
-}
+.w2 { animation-delay: 3.6s }
+.w3 { animation-delay: 3.75s; }
+.w4 { animation-delay: 3.9s; }
+.w6 { animation-delay: 4.05s; }
+.w7 { animation-delay: 4.2s }
+.w8 { animation-delay: 4.35s; }
+.w9 { animation-delay: 4.5s; }
 
-.pulsing-el {
-  animation-name: grow-up;
-  animation-delay: 1.2s;
-  animation-duration: 1.25s;
-  animation-timing-function; ease-out;
+@keyframes flip-up-one {
+  0%   { transform: rotateX( -90deg); opacity: 1; }
+  100% { transform: rotateX( 0deg ); opacity: 1; }
 }
 
 .w5 { 
@@ -114,24 +121,16 @@ body {
   animation-fill-mode: forwards;
 }
 
-.w2 { animation-delay: 3.6s }
-.w3 { animation-delay: 3.75s; }
-.w4 { animation-delay: 3.9s; }
-.w6 { animation-delay: 4.05s; }
-.w7 { animation-delay: 4.2s }
-.w8 { animation-delay: 4.35s; }
-.w9 { animation-delay: 4.5s; }
-
-@keyframes wipe-down { from { height: 0px; } to { height: 200px; } }
-
-@keyframes flip-up-one {
-  0%   { transform: rotateX( -90deg); opacity: 1; }
-  100% { transform: rotateX( 0deg ); opacity: 1; }
-}
-
 @keyframes slide-letter-to-right {
   0% { transform: translateX(-235px); opacity: 1 }
   100% { transform: translateX(0px); opacity: 1 }
+}
+
+.pulsing-el {
+  animation-name: grow-up;
+  animation-delay: 1.2s;
+  animation-duration: 1.25s;
+  animation-timing-function; ease-out;
 }
 
 @keyframes grow-up {
