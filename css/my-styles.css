@@ -57,6 +57,8 @@ body {
   visibility: visible; /* needed because the parent containers (l[n]) are hidden */
 }
 
+@keyframes fade-out { from {opacity: 1;} to {opacity: 0;}; }
+
 .w1 { 
   overflow: hidden; /* seems necessary */
   padding-right: 5px; /* More explicit padding, for position purposes */
@@ -76,6 +78,15 @@ body {
   animation-delay: 1.2s; 
   animation-duration: 2s;
   animation-fill-mode: forwards;
+}
+
+.japanese-letters {
+  position:absolute;
+  visibility: visible;
+  white-space: nowrap;
+  font-family: 'koruri-extrabold'; 
+  transform: scaleY(.60);
+  letter-spacing: -0.05em;
 }
 
 @keyframes fake-it {
@@ -183,5 +194,19 @@ div.school-idol {
   to   { opacity: 1; transform: translateY(0px) scaleY(.85); }
 }
 
+@font-face {
+  font-family: 'koruri-extrabold';
+  src: url('./Koruri-Extrabold.ttf');
+}
+
+
 /********************************************/
 @keyframes test-it { from { opacity: 0; } to { opacity: 1; } }
+
+.c1{
+  animation-name: fade-out;
+  animation-delay: 6s;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
