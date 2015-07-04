@@ -99,10 +99,8 @@ body {
 
 @keyframes wide-out { 
   0%   { width: 0px; visibility: visible; } 
-  35%  { width: 900px; visibility: visible; }
-  55%  { width: 900px; visibility: visible; color: #ffffff; }
-  75%  { width: 900px; visibility: visible; color: #E6438C;}
-  85% { width: 900px; visibility: visible; color: #E6438C;}
+  35%  { width: 900px; visibility: visible; color: #ffffff; }
+  65%  { width: 900px; visibility: visible; color: #E6438C; }
   100% { width: 900px; visibility: visible; color: #E6438C;}
 }
 
