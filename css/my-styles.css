@@ -55,7 +55,7 @@ body {
 .w1, .w2, .w3, .w4, .w5, .w6, .w7, .w8, .w9 {
   position: absolute;
   visibility: visible; /* needed because the parent containers (l[n]) are hidden */
-  perspective: 500px;
+  perspective: 300px;
 }
 
 @keyframes fade-out { from {opacity: 1;} to {opacity: 0;}; }
