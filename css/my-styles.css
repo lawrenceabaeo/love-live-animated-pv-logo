@@ -55,6 +55,7 @@ body {
 .w1, .w2, .w3, .w4, .w5, .w6, .w7, .w8, .w9 {
   position: absolute;
   visibility: visible; /* needed because the parent containers (l[n]) are hidden */
+  perspective: 500px;
 }
 
 @keyframes fade-out { from {opacity: 1;} to {opacity: 0;}; }
@@ -91,7 +92,7 @@ body {
   letter-spacing: -0.05em;
   animation-name: wide-out;
   animation-delay: 5.5s;
-  animation-duration: 3.5s;
+  animation-duration: 3.25s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
@@ -220,10 +221,49 @@ div.school-idol {
 /********************************************/
 @keyframes test-it { from { opacity: 0; } to { opacity: 1; } }
 
-.c1{
+X.c1{
   animation-name: fade-out;
   animation-delay: 5.5s;
   animation-duration: 1.5s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
+.c1{ display: inline-block; }
+.let1 { animation: fling-out1 .3s linear 5.5s 1 normal forwards }
+.let2 { animation: fling-out2 .3s linear 5.55s 1 normal forwards }
+.let3 { animation: fling-out3 .3s linear 5.6s 1 normal forwards }
+.let4 { animation: fling-out4 .3s linear 5.65s 1 normal forwards }
+.let5 { animation: fling-out5 .3s linear 5.7s 1 normal forwards }
+.let6 { animation: fling-out6 .3s linear 5.75s 1 normal forwards }
+.let7 { animation: fling-out7 .3s linear 5.8s 1 normal forwards }
+.let8 { animation: fling-out8 .3s linear 5.85s 1 normal forwards }
+.let9 { animation: fling-out9 .3s linear 5.9s 1 normal forwards }
+.let10 { animation: fling-out10 .3s linear 6s 1 normal forwards }
+
+@keyframes fling-out1 {
+  0%   { opacity: 1; transform: translate3d(0px, 0px, 0px); }
+  100% { opacity: 0; transform: translate3d(-80px, 0px, -400px); } }
+@keyframes fling-out2 {
+  0%   { opacity: 1; transform: translate3d(0px, 0px, 0px); }
+  100% { opacity: 0; transform: translate3d(-100px, -100px, -400px); } }
+@keyframes fling-out3 {
+  0%   { opacity: 1; transform: translate3d(0px, 0px, 0px); }
+  100% { opacity: 0; transform: translate3d(-100px, 150px, -400px); } }
+@keyframes fling-out4 {
+  0%   { opacity: 1; transform: translate3d(0px, 0px, 0px); }
+  100% { opacity: 0; transform: translate3d(-50px, -400px, -400px); } }
+@keyframes fling-out5 {
+  0%   { opacity: 1; transform: translate3d(0px, 0px, 0px); }
+  100% { opacity: 0; transform: translate3d(0px, 150px, -400px); } }
+@keyframes fling-out6 {
+  0%   { opacity: 1; transform: translate3d(0px, 0px, 0px); }
+  100% { opacity: 0; transform: translate3d(100px, 200px, -400px); } }
+@keyframes fling-out7 {
+  0%   { opacity: 1; transform: translate3d(0px, 0px, 0px); }
+  100% { opacity: 0; transform: translate3d(100px, -300px, -400px); } }
+@keyframes fling-out8 {
+  0%   { opacity: 1; transform: translate3d(0px, 0px, 0px); }
+  100% { opacity: 0; transform: translate3d(-200px, -150px, -400px); } }
+@keyframes fling-out9 {
+  0%   { opacity: 1; transform: translate3d(0px, 0px, 0px); }
+  100% { opacity: 0; transform: translate3d(200px, 500px, -500px); } }
