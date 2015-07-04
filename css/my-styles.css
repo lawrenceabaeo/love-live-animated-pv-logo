@@ -92,7 +92,7 @@ body {
   letter-spacing: -0.05em;
   animation-name: wide-out;
   animation-delay: 5.5s;
-  animation-duration: 3.25s;
+  animation-duration: 3s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
@@ -220,14 +220,6 @@ div.school-idol {
 
 /********************************************/
 @keyframes test-it { from { opacity: 0; } to { opacity: 1; } }
-
-X.c1{
-  animation-name: fade-out;
-  animation-delay: 5.5s;
-  animation-duration: 1.5s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-}
 .c1{ display: inline-block; }
 .let1 { animation: fling-out1 .3s linear 5.5s 1 normal forwards }
 .let2 { animation: fling-out2 .3s linear 5.55s 1 normal forwards }
