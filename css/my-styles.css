@@ -82,11 +82,27 @@ body {
 
 .japanese-letters {
   position:absolute;
-  visibility: visible;
+  left: -40px;
+  visibility: hidden;
   white-space: nowrap;
+  overflow: hidden;
   font-family: 'koruri-extrabold'; 
   transform: scaleY(.60);
   letter-spacing: -0.05em;
+  animation-name: wide-out;
+  animation-delay: 5.5s;
+  animation-duration: 3.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes wide-out { 
+  0%   { width: 0px; visibility: visible; } 
+  35%  { width: 900px; visibility: visible; }
+  55%  { width: 900px; visibility: visible; color: #ffffff; }
+  75%  { width: 900px; visibility: visible; color: #E6438C;}
+  85% { width: 900px; visibility: visible; color: #E6438C;}
+  100% { width: 900px; visibility: visible; color: #E6438C;}
 }
 
 @keyframes fake-it {
@@ -172,14 +188,16 @@ div.school-idol {
   font-family: 'saxmono';
   font-style: normal;
   font-size: 2.25rem;
+  color: #E6438C; /* pink */ 
   transform: scaleY(.85);
   position: absolute;
-  top: 380px;
-  left: 160px;
+  top: 392px;
+  left: 220px;
+  white-space: nowrap;
   opacity: 0; /* animation-fill-mode should persist aniamtion opacity 1 */
   animation-name: fade-in;
-  animation-duration: 2.25s;
-  animation-delay: 4.5s;
+  animation-duration: 2.3s;
+  animation-delay: 7.75s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
@@ -199,14 +217,13 @@ div.school-idol {
   src: url('./Koruri-Extrabold.ttf');
 }
 
-
 /********************************************/
 @keyframes test-it { from { opacity: 0; } to { opacity: 1; } }
 
 .c1{
   animation-name: fade-out;
-  animation-delay: 6s;
-  animation-duration: 2s;
+  animation-delay: 5.5s;
+  animation-duration: 1.5s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
