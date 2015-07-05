@@ -64,7 +64,7 @@ body {
   perspective: 300px;
 }
 
-@keyframes fade-out { from {opacity: 1;} to {opacity: 0;}; }
+@keyframes fade-out { 0% {opacity: 1;} 100% {opacity: 0;}; }
 
 .w1 { 
   overflow: hidden; /* seems necessary */
