@@ -124,7 +124,7 @@ body {
         1px -1px .15em #FFFFFF, 
         -1px 1px .15em #FFFFFF,
         1px 1px .15em #FFFFFF; }
-  100% { text-shadow: none; }
+  100% { text-shadow: none; opacity: 0;}
 }
 
 .w2, .w3, .w4, 
