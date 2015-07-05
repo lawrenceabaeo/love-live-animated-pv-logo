@@ -101,11 +101,18 @@ body {
   font-family: 'koruri-extrabold'; 
   transform: scaleY(.60);
   letter-spacing: -0.05em;
+  z-index: 101;
   animation-name: wide-out;
   animation-delay: 5.5s;
   animation-duration: 3s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
+}
+
+.wiki-link{
+  text-decoration: none;
+  color: #FFFFFF;
+  color: currentColor;
 }
 
 @keyframes wide-out { 
