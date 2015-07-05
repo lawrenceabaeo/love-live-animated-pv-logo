@@ -4,11 +4,7 @@ body {
   padding: 0px 0px;
   margin: 0px 0px;
   height: 100%;
-  /* background: #4FA9FB; */
   background: linear-gradient(45deg, #45A9FB, #1B40F9); 
-  Xanimation-name: background-change;
-  Xanimation-duration: 2s;
-  Xanimation-fill-mode: forwards;
 }
 
 @keyframes background-change{
@@ -109,9 +105,8 @@ body {
   animation-fill-mode: forwards;
 }
 
-.wiki-link{
+.wiki-link, .school-link {
   text-decoration: none;
-  color: #FFFFFF;
   color: currentColor;
 }
 
