@@ -4,7 +4,18 @@ body {
   padding: 0px 0px;
   margin: 0px 0px;
   height: 100%;
-  background-color: #000000;
+  /* background: #4FA9FB; */
+  background: linear-gradient(45deg, #45A9FB, #1B40F9); 
+  Xanimation-name: background-change;
+  Xanimation-duration: 2s;
+  Xanimation-fill-mode: forwards;
+}
+
+@keyframes background-change{
+  /* #1B40F9 deep blue */
+  /* #4FA9FB lighter blue */
+  0%   { background: linear-gradient(45deg, #45A9FB, #4FA9FB) }
+  100% { background: linear-gradient(45deg, #45A9FB, #1B40F9) }
 }
 
 .flex-container {
