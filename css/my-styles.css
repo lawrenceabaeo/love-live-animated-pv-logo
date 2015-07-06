@@ -8,20 +8,6 @@ body {
   background: linear-gradient(45deg, #45A9FB, #1B40F9); 
 }
 
-@-webkit-keyframes background-change{
-  /* #1B40F9 deep blue */
-  /* #4FA9FB lighter blue */
-  0%   { background: -webkit-linear-gradient(45deg, #45A9FB, #4FA9FB); background: linear-gradient(45deg, #45A9FB, #4FA9FB) }
-  100% { background: -webkit-linear-gradient(45deg, #45A9FB, #1B40F9); background: linear-gradient(45deg, #45A9FB, #1B40F9) }
-}
-
-@keyframes background-change{
-  /* #1B40F9 deep blue */
-  /* #4FA9FB lighter blue */
-  0%   { background: -webkit-linear-gradient(45deg, #45A9FB, #4FA9FB); background: linear-gradient(45deg, #45A9FB, #4FA9FB) }
-  100% { background: -webkit-linear-gradient(45deg, #45A9FB, #1B40F9); background: linear-gradient(45deg, #45A9FB, #1B40F9) }
-}
-
 .flex-container {
   padding: 0px 0px;
   margin: 0px 0px;
@@ -317,7 +303,7 @@ div.school-idol {
 }
 
 @font-face {
-  font-family: 'saxmono';
+  font-family: 'saxmono'; /* http://www.fontex.org/download/saxmono.ttf */
   src: url('./saxmono.ttf');
 }
 
@@ -332,7 +318,7 @@ div.school-idol {
 }
 
 @font-face {
-  font-family: 'koruri-extrabold';
+  font-family: 'koruri-extrabold'; /* http://koruri.lindwurm.biz */
   src: url('./Koruri-Extrabold.ttf');
 }
 
