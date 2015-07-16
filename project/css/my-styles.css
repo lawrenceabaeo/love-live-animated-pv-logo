@@ -4,8 +4,12 @@ body {
   padding: 0px 0px;
   margin: 0px 0px;
   height: 100%;
+  /*
   background: -webkit-linear-gradient(45deg, #45A9FB, #1B40F9);
   background: linear-gradient(45deg, #45A9FB, #1B40F9); 
+  */
+  background: -webkit-linear-gradient(45deg, #EFF5FB, #3787c8);
+  background: linear-gradient(45deg, #EFF5FB, #3787c8); 
 }
 
 .flex-container {
