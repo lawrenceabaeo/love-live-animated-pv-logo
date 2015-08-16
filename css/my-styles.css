@@ -25,7 +25,7 @@ body {
   padding: 0px 0px;
 }
 
-.flex-container {
+.overall-flex-container {
   /***** box model stuff *****/
   height: 100%;
   margin: 0px 0px;
@@ -46,10 +46,12 @@ body {
           justify-content: center;
 }
 
-.inner {
+.inner-wrapper-container {
+  /***** POTENTIALLY Remove this in an upcoming cleanup *****/
   /***** box model stuff *****/
   padding: 0px 0px;
   margin: 0px 0px;
+  /***** End removal *****/
   
   /***** lettering *****/
   color: #ffffff;
@@ -72,13 +74,14 @@ body {
  * the w[n] letters are then used because some of the 
  * animations only work with 
  * absolutely positioned elements */
-.l1, .l2, .l3, .l4, .l5, .l6, .l7, .l8, .l9 {
+/* hlp means hidden-letter-positioner */
+.hlp1, .hlp2, .hlp3, .hlp4, .hlp5, .hlp6, .hlp7, .hlp8, .hlp9 {
   display: inline-block;
   position: relative;
   visibility: hidden;
 }
 
-.l1 { 
+.hlp1 { /* hlp means hidden-letter-positioner */
    /* I have to use explict pixel size here so
    * the big 'L' doesn't squash next to the 'o'.
    * during the wipe animation! */
@@ -86,6 +89,9 @@ body {
    padding-left: 10px;
 }
 
+/* I chose 'w' randomly 
+   These 'w's represent the visible letters
+*/
 .w1, .w2, .w3, .w4, .w5, .w6, .w7, .w8, .w9 {
   position: absolute;
   -webkit-perspective: 300px;
