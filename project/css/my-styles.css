@@ -406,5 +406,5 @@ div.school-idol {
 
 .wiki-link, .school-link {
   text-decoration: none;
-  color: currentColor;
+  color: inherit;
 }
