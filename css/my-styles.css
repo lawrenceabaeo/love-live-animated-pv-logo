@@ -193,11 +193,6 @@ body {
 /*********************/
 
 
-.wiki-link, .school-link {
-  text-decoration: none;
-  color: currentColor;
-}
-
 .w2, .w3, .w4, 
 .w6, .w7, .w8, .w9 {
   opacity: 0; /* animation-fill-mode will persist opacity 1 used during animation */
@@ -284,7 +279,6 @@ body {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-/***** KEYFRAMES *****/
 @-webkit-keyframes pulse {
   0%   { opacity: 1; -webkit-transform: scale(1); transform: scale(1); visibility: visible; }
   75%  { opacity: 0; }
@@ -409,3 +403,8 @@ div.school-idol {
 @keyframes fling-out9 {
   0%   { opacity: 1; -webkit-transform: translate3d(0px, 0px, 0px); transform: translate3d(0px, 0px, 0px); }
   100% { opacity: 0; -webkit-transform: translate3d(200px, 500px, -500px); transform: translate3d(200px, 500px, -500px); } }
+
+.wiki-link, .school-link {
+  text-decoration: none;
+  color: currentColor;
+}
