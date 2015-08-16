@@ -93,16 +93,6 @@ body {
   visibility: visible; /* needed because the parent containers (l[n]) are hidden */
 }
 
-/***** Remove this during another code clean-up *****/
-@-webkit-keyframes fade-out { 
-  0% {opacity: 1;} 
-  100% {opacity: 0;} 
-}
-@keyframes fade-out { 
-  0% {opacity: 1;} 
-  100% {opacity: 0;} 
-}
-
 .w1 { 
   overflow: hidden; /* seems necessary */
   padding-right: 5px; /* More explicit padding, for position purposes */
