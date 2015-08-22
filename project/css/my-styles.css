@@ -30,6 +30,15 @@ body {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   body {
     background-image: url("../img/clouds.jpg");
+    background-size: 200%;
+    -webkit-animation: scale-clouds 95s linear 0s infinite;
+    animation: scale-clouds 95s linear 0s infinite;
+  }
+  @-webkit-keyframes scale-clouds {
+    0% {background-size: 200%;} 100%{background-size: 100%;}
+  }
+  @keyframes scale-clouds {
+    0% {background-size: 200%;} 100%{background-size: 100%;}
   }
 }
 /******************************/
