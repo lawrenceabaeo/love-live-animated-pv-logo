@@ -3,14 +3,16 @@
 @font-face {
   /* http://koruri.lindwurm.biz */
   font-family: 'koruri-extrabold'; 
-  src: url('./Koruri-Extrabold.woff') format('woff'),
+  src: url('./Koruri-Extrabold.woff2') format('woff2'),
+       url('./Koruri-Extrabold.woff') format('woff'),
        url('./Koruri-Extrabold.ttf') format('truetype');
 }
 
 @font-face {
    /* http://www.fontex.org/download/saxmono.ttf */
   font-family: 'saxmono';
-  src: url('./saxmono.woff') format('woff'),
+  src: url('./saxmono.woff2') format('woff2'),
+       url('./saxmono.woff') format('woff'),
        url('./saxmono.ttf') format('truetype');
 }
 /********************************************/
