@@ -1,16 +1,17 @@
 /********************************************/
 /***** Fonts *****/
 @font-face {
-  /* Font is from here: 
-   * http://www.fontex.org/download/saxmono.ttf
-   */
-  font-family: 'saxmono'; /* http://www.fontex.org/download/saxmono.ttf */
-  src: url('./saxmono.ttf');
+  /* http://koruri.lindwurm.biz */
+  font-family: 'koruri-extrabold'; 
+  src: url('./Koruri-Extrabold.woff') format('woff'),
+       url('./Koruri-Extrabold.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'koruri-extrabold'; /* http://koruri.lindwurm.biz */
-  src: url('./Koruri-Extrabold.ttf');
+   /* http://www.fontex.org/download/saxmono.ttf */
+  font-family: 'saxmono';
+  src: url('./saxmono.woff') format('woff'),
+       url('./saxmono.ttf') format('truetype');
 }
 /********************************************/
 
