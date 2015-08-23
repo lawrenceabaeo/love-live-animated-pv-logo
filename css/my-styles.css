@@ -124,10 +124,6 @@ body {
   padding-left: 8px;
   -webkit-animation-name: wipe-down;
           animation-name: wipe-down;
-  /* 
-  -webkit-animation-duration: 1.95s;
-          animation-duration: 1.95s;
-  */
   -webkit-animation-duration: 1.85s;
           animation-duration: 1.85s;
   -webkit-animation-timing-function: linear;
