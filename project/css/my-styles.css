@@ -277,8 +277,8 @@ body {
 
 .pulsing {
   position: absolute;
-  visibility: hidden;
   left: 18px;
+  visibility: hidden;
 }
 
 .p1 {
@@ -317,7 +317,7 @@ body {
 /********************************************/
 /* SCHOOL IDOL LETTER STYLING AND ANIMATION */
 
-div.school-idol {
+.school-idol {
   /***** lettering *****/
   color: #E6438C; /* pink */ 
   font-family: 'saxmono';
@@ -427,6 +427,6 @@ div.school-idol {
   100% { opacity: 0; -webkit-transform: translate3d(200px, 500px, -500px); transform: translate3d(200px, 500px, -500px); } }
 
 .wiki-link, .school-link {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
